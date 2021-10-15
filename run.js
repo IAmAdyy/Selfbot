@@ -30,7 +30,7 @@ const starts = async (conn = new WAConnection()) => {
     })
     conn.on('open', () => {
         success('2', 'Tersambung kak')
-        conn.sendMessage(`60199782326@s.whatsapp.net`, `*Bot Telah Berhasil Tersambung Pada Nomor Ini*`, MessageType.text, {contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "SelfBotz By Itsuki",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://youtube.com/adiination"}}})
+        conn.sendMessage(`60199782326@s.whatsapp.net`, `*Bot Telah Berhasil Tersambung Pada Nomor Ini*`, MessageType.text, {contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "SelfBotz By Adii",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://youtube.com/adiination"}}})
     })
     await conn.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./session.json', JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
