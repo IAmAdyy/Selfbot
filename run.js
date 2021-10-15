@@ -18,7 +18,7 @@ nocache('./lib/welcome.js', module => console.log(`${module}`))
 const starts = async (conn = new WAConnection()) => {
     conn.logger.level = 'warn'
     conn.version = [2, 2123, 8]
-    conn.browserDescription = [ 'ItsukiBotz [ Connected ]', 'Safari', '10.0' ]
+    conn.browserDescription = [ 'AdiiBot [ Connected ]', 'Safari', '10.0' ]
     console.log(banner.string)
     conn.on('qr', () => {
         console.log(color('[','white'), color('!','red'), color(']','white'), color(' SCAN QR TO CONNECT'))
