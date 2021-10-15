@@ -1,0 +1,10 @@
+{
+    "wait": "_please wait. lemme process this shit_",
+    "error": {
+        "Iv": "shit. the link is not valid",
+        "api": "wtf. there is an error"
+    },
+    "OnlyGrup": "oi. this feature can be used in group",
+    "GrupAdmin": "oi. this feature can be used in group admin",
+    "BotAdmin": "gimme admin to use this command"
+}
