@@ -204,6 +204,10 @@ const reply = (teks) => {
 const sendMess = (hehe, teks) => {
         conn.sendMessage(hehe, teks, text)
 }
+const sendKontak = (from, nomor, nama, org = "") => {
+	       const vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + 'ORG:' + org + '\n' + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
+	       conn.sendMessage(from, {displayname: nama, vcard: vcard}, MessageType.contact, {quoted: mek})
+}
 const mentions = (teks, memberr, id) => {
         (id == null || id == undefined || id == false) ? conn.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : conn.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": memberr } })
 }
@@ -448,12 +452,7 @@ break
     break
 
 case 'owner': case 'creator':
-imgreply(`Hi kak ${pushname}
-Ini ownerku
-
-wa.me/60199782326
-
-Sc bot : .sc`)
+sendKontak(from, '60199782326', 'Ini Gue', 'Wkwk')
 break
 
 case 'tes':
