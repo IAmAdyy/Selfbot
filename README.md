@@ -10,6 +10,9 @@ cd Selfbot
 npm i
 node .
 ```
+###### Note : If `apt install libwebp` didn't work
+###### Use `apt install webp`
+
 
 ## Install di Windows
  INSTALL
@@ -23,3 +26,6 @@ cd Selfbot
 npm i
 node .
 ```
+
+# Thanks to
+- [AdulAlhy](github.com/adulalhy)
