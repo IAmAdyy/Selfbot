@@ -385,8 +385,24 @@ imgreply(`STATUS BOTZ\n${selfnya ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
 
 case 'menu':
 case 'help':
-await buttonmenu(reply, pushname, time, from)
-break
+runzz = process.uptime()
+bjirnya = `${kyun(runzz)}`
+sendButImage(
+          from,
+          `Hello ${pushname} 👋\n`,
+          `_Welcome to AdyyBotz_\n\nRuntime : ${bjirnya}\nTime : ${time}\n\n_Jika button tidak muncul_\n_silahkan ketik ${prefix}menu_`,
+          fakeimg,
+          [
+            {
+              buttonId: `command`,
+              buttonText: {
+                displayText: `Command`,
+              },
+              type: 1,
+            },
+          ]
+        );
+        break;
 
 case'command':
 kentol = process.uptime()
