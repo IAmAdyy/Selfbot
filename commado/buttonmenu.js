@@ -7,7 +7,7 @@ const WAConnection = simple.WAConnection(_WAConnection)
 const buttonmenu = async(reply, pushname, time, from) => {
 	conn = new WAConnection();
 	reply('[❗] Tunggu woy.')
-        await conn.send2ButtonLoc(from, await (await fetch('https://telegra.ph/file/a9b9532c377dc2f152d1e.jpg')).buffer(), `Hello ${pushname} 👋
+        conn.send2ButtonLoc(from, await (await fetch('https://telegra.ph/file/a9b9532c377dc2f152d1e.jpg')).buffer(), `Hello ${pushname} 👋
 
 _Welcome to Simple Menu_
 
