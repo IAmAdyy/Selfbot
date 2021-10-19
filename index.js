@@ -387,27 +387,35 @@ case 'menu':
 case 'help':
 runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
-sendButImage(
-          from,
-          `Hello ${pushname} 👋`,
-          `_Welcome to AdyyBotz_
+menus = `Hello ${pushname} 🗿👋
+
+_Welcome to Simple menu_
+
 Runtime : ${bjirnya}
 Time : ${time}
-
-_Jika button tidak muncul_
-_silahkan ketik ${prefix}menu_`,
-          fakeimg,
-          [
-            {
-              buttonId: `command`,
-              buttonText: {
-                displayText: `Command`,
-              },
-              type: 1,
-            },
-          ]
-        );
-        break;
+Prefix : ${prefix}
+`
+sendButMessage(
+from,
+menu,
+`Silahkan pilih salah satu`,
+ [
+ {
+buttonId: `command`,
+buttonText: {
+displayText: `ALL COMMANDS`,
+},
+type: 1,
+},
+{
+buttonId: `sc`,
+buttonText: {
+displayText: `SCRIPT BOTZ`,
+},
+type: 1,
+},
+])
+break
 
 case'command':
 kentol = process.uptime()
