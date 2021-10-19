@@ -387,17 +387,16 @@ case 'menu':
 case 'help':
 runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
-menus = `Hello ${pushname} 🗿👋
+sendButMessage(
+from,
+`Hello ${pushname} 🗿👋
 
 _Welcome to Simple menu_
 
 Runtime : ${bjirnya}
 Time : ${time}
 Prefix : ${prefix}
-`
-sendButMessage(
-from,
-`${menus},
+`,
 `Silahkan pilih salah satu`,
  [
  {
