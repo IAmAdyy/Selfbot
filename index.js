@@ -389,8 +389,13 @@ runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
 sendButImage(
           from,
-          `Hello ${pushname} 👋\n`,
-          `_Welcome to AdyyBotz_\n\nRuntime : ${bjirnya}\nTime : ${time}\n\n_Jika button tidak muncul_\n_silahkan ketik ${prefix}menu_`,
+          `Hello ${pushname} 👋`,
+          `_Welcome to AdyyBotz_
+Runtime : ${bjirnya}
+Time : ${time}
+
+_Jika button tidak muncul_
+_silahkan ketik ${prefix}menu_`,
           fakeimg,
           [
             {
