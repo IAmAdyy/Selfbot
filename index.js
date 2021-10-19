@@ -36,13 +36,13 @@ const { fetchJson, getBase64, kyun, createExif } = require('./lib/fetcher')
 const { yta, ytv, igdl, upload, formatDate } = require('./lib/ytdl')
 const { webp2mp4File} = require('./lib/webp2mp4')
 const { jadibot, stopjadibot, listjadibot } = require('./lib/jadibot')
+const { buttonmenu } = require('./commado/buttonmenu')
 //************************************************************\\  
 //SIMPLE
 const { help } = require('./commado/help')
 const { jpmenu } = require('./commado/jpmenu')
 const { rumenu } = require('./commado/rumenu')
 const { virtex } = require('./commado/virtex')
-const { buttonmenu } = require('./commado/buttonmenu')
 const mess = JSON.parse(fs.readFileSync('./commado/mess.json'));
 const setting = JSON.parse(fs.readFileSync('./setting.json'))
 const { fakeimg, f,fake,x, xteamApi } = setting
