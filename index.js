@@ -397,7 +397,7 @@ Prefix : ${prefix}
 `
 sendButMessage(
 from,
-menu,
+`${menus},
 `Silahkan pilih salah satu`,
  [
  {
