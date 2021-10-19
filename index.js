@@ -42,6 +42,7 @@ const { help } = require('./commado/help')
 const { jpmenu } = require('./commado/jpmenu')
 const { rumenu } = require('./commado/rumenu')
 const { virtex } = require('./commado/virtex')
+const { buttonmenu } = require('./commado/buttonmenu')
 const mess = JSON.parse(fs.readFileSync('./commado/mess.json'));
 const setting = JSON.parse(fs.readFileSync('./setting.json'))
 const { fakeimg, f,fake,x, xteamApi } = setting
@@ -382,7 +383,12 @@ case 'status':
 imgreply(`STATUS BOTZ\n${selfnya ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
  break
 
-case'help': case'menu':
+case 'menu':
+case 'help':
+buttonmenu(reply, pushname, time, from)
+break
+
+case'command':
 kentol = process.uptime()
 kentodd = `${kyun(kentol)}`
 await reply('Loading...')
@@ -456,7 +462,7 @@ sendKontak(from, '60199782326', 'Ini Gue', 'Wkwk')
 break
 
 case 'tes':
-conn.sendMessage(from, `${x}Okeh nyala`, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "Itsuki Bot",body:"Created using JavaScript. Lol",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
+conn.sendMessage(from, `${x}Okeh nyala`, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "",body:"Created using JavaScript. Lol",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
 break
 
 case 'group': case 'grup':
