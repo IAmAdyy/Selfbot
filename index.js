@@ -385,7 +385,7 @@ imgreply(`STATUS BOTZ\n${selfnya ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
 
 case 'menu':
 case 'help':
-buttonmenu(reply, pushname, time, from)
+await buttonmenu(reply, pushname, time, from)
 break
 
 case'command':
