@@ -55,8 +55,6 @@ _scommand = JSON.parse(fs.readFileSync("./database/scommand.json"));
 selfnya = true
 multi = true
 nopref = false
-moyai = false
-ohmyg = false
 prefa = 'z'
 
 //************************************************************\\  
@@ -121,12 +119,6 @@ const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.
         } else {
         if (nopref){
         prefix = ''
-        } else {
-        if (moyai){
-        prefix = '🗿'
-        } else {
-        if (ohmyg){
-        prefix = '😱'
         } else {
         prefix = prefa
 }}
@@ -692,6 +684,12 @@ quoted: mek
 conn.sendMessage(from, optionshidetagg, text, {quoted: fonce})
 break
            
+case 'setprefix2':
+foc = args.join(' ')
+prefix = foc
+imgreply(`berhasil mengubah ke ${foc}`)
+break
+
 case 'setprefix':
 if (!mek.key.fromMe)return reply("Khusus Owner");
 fg = args.join(' ')
