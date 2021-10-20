@@ -702,17 +702,6 @@ imgreply(`Berhasil mengubah prefix ke ${fg}`)
 multi = false
 nopref = true
 imgreply(`Berhasil mengubah prefix ke ${fg}`)
-} else if (args[0] == "moyai") {
-multi = false
-nopref = false
-moyai = true
-imgreply(`Berhasil mengubah prefix ke ${fg}`)
-} else if (args[0] == "ohmyg") {
-multi = false
-nopref = false
-moyai = false
-ohmyg = true
-imgreply(`Berhasil mengubah prefix ke ${fg}`)
 } else if (!fg) {
 sendButMessage(
 from,
@@ -720,9 +709,7 @@ from,
 
 List prefix
 - multi
-- nopref
-- moyai
-- ohmyg`,
+- nopref`,
 `atau bisa pilih dibutton`,
  [
  {
