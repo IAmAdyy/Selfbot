@@ -55,6 +55,8 @@ _scommand = JSON.parse(fs.readFileSync("./database/scommand.json"));
 selfnya = true
 multi = true
 nopref = false
+moyai = false
+ohmyg = false
 prefa = 'z'
 
 //************************************************************\\  
@@ -119,6 +121,12 @@ const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.
         } else {
         if (nopref){
         prefix = ''
+        } else {
+        if (moyai){
+        prefix = '🗿'
+        } else {
+        if (ohmyg){
+        prefix = '😱'
         } else {
         prefix = prefa
 }}
@@ -694,11 +702,28 @@ imgreply(`Berhasil mengubah prefix ke ${fg}`)
 multi = false
 nopref = true
 imgreply(`Berhasil mengubah prefix ke ${fg}`)
+} else if (args[0] == "moyai") {
+multi = false
+nopref = false
+moyai = true
+imgreply(`Berhasil mengubah prefix ke ${fg}`)
+} else if (args[0] == "ohmyg") {
+multi = false
+nopref = false
+moyai = false
+ohmyg = true
+imgreply(`Berhasil mengubah prefix ke ${fg}`)
 } else if (!fg) {
 sendButMessage(
 from,
-`MODE SET PREFIX!`,
-`Silahkan pilih salah satu`,
+`「 SETPREFIX 」
+
+List prefix
+- multi
+- nopref
+- moyai
+- ohmyg`,
+`atau bisa pilih dibutton`,
  [
  {
 buttonId: `setprefix multi`,
