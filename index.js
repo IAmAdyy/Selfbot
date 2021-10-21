@@ -180,7 +180,7 @@ var hours = Math.floor(seconds / (60*60));
 var minutes = Math.floor(seconds % (60*60) / 60);
 var seconds = Math.floor(seconds % 60);
 
-return `• ${pad(hours)} Jam • ${pad(minutes)} Menit • ${pad(seconds)} Detik`
+return `${pad(hours)} h ${pad(minutes)} m ${pad(seconds)} s`
 }
 //**********************[FUNCTION JAM]**********************\\
     function waktu(seconds) {
@@ -389,27 +389,27 @@ runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
 sendButMessage(
 from,
-`Hello ${pushname} 🗿👋
+`🌹 Button Menu
 
-_Welcome to Simple menu_
-
-Runtime : ${bjirnya}
-Time : ${time}
-Prefix : ${prefix}
+🔖 Name : ${pushname}
+🔖 Runtime : ${bjirnya}
+🔖 Time : ${time}
+🔖 Prefix : ${prefix}
 `,
-`Silahkan pilih salah satu`,
+`_Jika button timdak muncul_
+_silahkan kemtik .command_`,
  [
  {
 buttonId: `command`,
 buttonText: {
-displayText: `ALL COMMANDS`,
+displayText: `⎙ ALL COMMANDS`,
 },
 type: 1,
 },
 {
 buttonId: `sc`,
 buttonText: {
-displayText: `SCRIPT BOTZ`,
+displayText: `🌹 SCRIPT BOTZ`,
 },
 type: 1,
 },
@@ -420,13 +420,13 @@ case'command':
 kentol = process.uptime()
 kentodd = `${kyun(kentol)}`
 await reply('Loading...')
-conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { thumbnail: fakeimg, jpegThumbnail: fakeimg, contextInfo : { mentionedJid: sender,
+conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftroli, thumbnail: fakeimg, jpegThumbnail: fakeimg, contextInfo : { mentionedJid: sender,
     externalAdReply: {
-                    title: `AdiiSelfBot`,
+                    title: `Time : ${time}`,
                     body: `Hello ${pushname}👋\nRuntime : ${kentodd}`,
                     mediaType: 2,
                     mediaUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ',
-                    thumbnailUrl: fakeimg
+                    thumbnailUrl: await conn.getProfilePicture(conn.user.jid)
                 }}})
 break
 
