@@ -1,7 +1,7 @@
 const help = (f, pushname, time, kentodd, sender) => {
-	return `_Hello ${pushname} 👋_
+	return `_Hello *${pushname}* 👋_
 
-⎙ _Info Bot_
+🌹 _Info Bot_
 🔖 _Base : https://github.com/adulalhy/SZ-SELF_
 🔖 _Recode : Adii_
 🔖 _Script : https://github.com/IAmAdyy/Selfbot_
@@ -15,35 +15,28 @@ const help = (f, pushname, time, kentodd, sender) => {
 🔖 _Time : ${time}_
 
 🌹 _Info_
-\`\`\`
-${f}sc
+\`\`\`${f}sc
 ${f}owner
 ${f}ping
 ${f}status
 ${f}runtime
-${f}tes
-\`\`\`
+${f}tes\`\`\`
 
 🌹 _Other Menu_
-\`\`\`
-${f}japanesemenu
+\`\`\`${f}japanesemenu
 ${f}russianmenu
 ${f}menufvn
-${f}menuftoko
-\`\`\`
+${f}menuftoko\`\`\`
 
 🌹 _Multi Session_
-\`\`\`
-${f}jadibot
+\`\`\`${f}jadibot
 ${f}scan
 ${f}stopjadibot
 ${f}byebot
-${f}listjadibot
-\`\`\`
+${f}listjadibot\`\`\`
 
 🌹 _Owner Bot_
-\`\`\`
-🔖 > [eval]
+\`\`\`🔖 > [eval]
 🔖 => [eval async]
 🔖 $ [code]
 ${f}term [code]
@@ -68,77 +61,59 @@ ${f}sider [reply]
 ${f}take [author|packname]
 ${f}virtex [virus]
 ${f}setnama [name]
-${f}sherelock [text|text]
-\`\`\`
+${f}sherelock [text|text]\`\`\`
 
 🌹 _Video/Vn_
-\`\`\`
-${f}tomp4 [reply sticker]
+\`\`\`${f}tomp4 [reply sticker]
 ${f}detikvideo [sec]
 ${f}detikvn [sec]
-${f}tts [lang] [text]
-\`\`\`
+${f}tts [lang] [text]\`\`\`
 
 🌹 _Anime_
-\`\`\`
-${f}waifu
+\`\`\`${f}waifu
 ${f}loli
-${f}husbu
-\`\`\`
+${f}husbu\`\`\`
 
 🌹 _Pictures_
-\`\`\`
-${f}cogan
+\`\`\`${f}cogan
 ${f}cecan
-${f}darkjokes
-\`\`\`
+${f}darkjokes\`\`\`
 
 🌹 _Group_
-\`\`\`
-${f}kick [reply]
+\`\`\`${f}kick [reply]
 ${f}add [reply]
 ${f}group [button]
 ${f}listadmin [admin group]
 ${f}tagall [teks]
 ${f}hidetag [teks]
 ${f}rulesgroup [desc gc]
-${f}getpic [@tag]
-\`\`\`
+${f}getpic [@tag]\`\`\`
 
 🌹 _Other_
-\`\`\`
-${f}inspect [link grup]
+\`\`\`${f}inspect [link grup]
 ${f}readmore [text|text]
 ${f}linkwa [query]
-${f}translate [lang] [text]
-\`\`\`
+${f}translate [lang] [text]\`\`\`
 
 🌹 _Sticker_
-\`\`\`
-${f}sticker [image]
-${f}toimg [sticker]
-\`\`\`
+\`\`\`${f}sticker [image]
+${f}toimg [sticker]\`\`\`
 
 🌹 _Downloader_
-\`\`\`
-${f}play [query]
+\`\`\`${f}play [query]
 ${f}video [query]
 ${f}pinterest [query]
 ${f}playstore [query]
 ${f}igstory [username]
-${f}lirik [query]
-\`\`\`
+${f}lirik [query]\`\`\`
 
 🌹 _Sticker Command_
-\`\`\`
-${f}addcmd
+\`\`\`${f}addcmd
 ${f}delcmd
-${f}listcmd
-\`\`\`
+${f}listcmd\`\`\`
 
 🌹 _Fun_
-\`\`\`
-${f}jadian
+\`\`\`${f}jadian
 ${f}ganteng
 ${f}beban
 ${f}cantik
@@ -151,8 +126,7 @@ ${f}pakgirl
 ${f}sange
 ${f}nolep
 ${f}jahat
-${f}baik
-\`\`\`
+${f}baik\`\`\`
 
 _FITURNYA DIKIT AJA. JANGAN BULLY SAIA_
 `
