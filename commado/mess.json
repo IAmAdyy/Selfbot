@@ -1,10 +1,10 @@
 {
-    "wait": "_please wait. lemme process this shit_",
+    "wait": "🌹 *_Silahkan Tunggu Ya Kak_*",
     "error": {
-        "Iv": "shit. the link is not valid",
-        "api": "wtf. there is an error"
+        "Iv": "❗ *_Link Anda Tidak Valid_*",
+        "api": "🌹 *_Maaf Terjadi Kesalahkan Saat Memasuki Web/Scrape_*"
     },
-    "OnlyGrup": "oi. this feature can be used in group",
-    "GrupAdmin": "oi. this feature can be used in group admin",
+    "OnlyGrup": "👥 *_Only Group_*",
+    "GrupAdmin": "🖲️ *_Admin Group Only_*",
     "BotAdmin": "gimme admin to use this command"
 }
