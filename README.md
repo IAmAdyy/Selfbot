@@ -1,19 +1,18 @@
 
 ![kyaa-onichan](./pic/3775515.jpg)
-<h1 align="center">Selfbot Whatsapp</h1>
-<h3 align="center">Free Apikey (mungkin)</h3>
+<h1 align="center">🌹 Selfbot Whatsapp</h1>
 
-<h2 align="center">Deploy to Heroku</h3>
-<h3 align="center">https://heroku.com/deploy?template=https://github.com/IAmAdyy/Selfbot</h3>
+## 🔖 Deploy to Heroku
+> https://heroku.com/deploy?template=https://github.com/IAmAdyy/Selfbot
 
-<h2 align="center">Heroku Bulidpack</h3>
-<h3 align="center">https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest</h3>
-<h3 align="center">https://github.com/clhuang/heroku-buildpack-webp-binaries</h3>
+### ❗ Heroku Bulidpack
+> https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+> https://github.com/clhuang/heroku-buildpack-webp-binaries
 
-<h2 align="center">Run on Repl.It</h2>
-<h3 align="center">https://repl.it/github/IAmAdyy/Selfbot</h3>
+## 🌹 Run on Repl.It<
+> https://repl.it/github/IAmAdyy/Selfbot
 
-## Install di Termux/Vps
+## `>_` Install di Termux/Vps
 ```cmd
 apt install install git nodejs ffmpeg libwebp
 git clone https://github.com/IAmAdyy/Selfbot
@@ -25,8 +24,8 @@ node .
 ##### Use `apt install webp`
 
 
-## Install di Windows
- INSTALL
+## 🖥️ Install di Windows
+ Prerequisites
 * [Node.js](https://nodejs.org/en/)
 * [Git](https://git-scm.com/downloads)
 * [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2020-12-08-13-03/ffmpeg-n4.3.1-26-gca55240b8c-win64-gpl-4.3.zip)
