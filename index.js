@@ -203,7 +203,7 @@ const reply = (teks) => {
         conn.sendMessage(from, teks, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "Adii Bot [SELF]",body:`TIME : ${time}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
 }
 const sendMess = (hehe, teks) => {
-        conn.sendMessage(hehe, teks, text)
+        conn.sendMessage(hehe, teks, text, {quoted:ftoko})
 }
 const sendKontak = (from, nomor, nama, org = "") => {
 	       const vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + 'ORG:' + org + '\n' + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
@@ -367,7 +367,7 @@ break
 case'>':
 if (!mek.key.fromMe) return
 try {
-return conn.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: fvn})
+return conn.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: ftoko})
 } catch(err) {
 e = String(err)
 reply(e)
@@ -389,12 +389,12 @@ runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
 sendButMessage(
 from,
-`🌹 Button Menu
+`🌹 _Simple menu_
 
-🔖 Name : ${pushname}
-🔖 Runtime : ${bjirnya}
-🔖 Time : ${time}
-🔖 Prefix : ${prefix}
+🔖 _Name : ${pushname}_
+🔖 _Runtime : ${bjirnya}_
+🔖 _Time : ${time}_
+🔖 _Prefix : ${prefix}_
 `,
 `_Jika button timdak muncul_
 _silahkan kemtik .command_`,
@@ -419,27 +419,20 @@ break
 case'command':
 kentol = process.uptime()
 kentodd = `${kyun(kentol)}`
-await reply('Loading...')
-conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftroli, thumbnail: fakeimg, jpegThumbnail: fakeimg, contextInfo : { mentionedJid: sender,
+await reply('Silahkan ditunggu..')
+conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftoko, thumbnail: fakeimg, jpegThumbnail: fakeimg, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
     externalAdReply: {
                     title: `Time : ${time}`,
                     body: `Hello ${pushname}👋\nRuntime : ${kentodd}`,
                     mediaType: 2,
                     mediaUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ',
-                    thumbnailUrl: await conn.getProfilePicture(conn.user.jid)
+                    thumbnailUrl: 'https://telegra.ph/file/3cb0ee81e6d6fa9b3a2ab.png'
                 }}})
 break
 
-case'menufvn':
-conn.sendMessage(from, help(f, pushname, time), text, {quoted: fvn})
-break
-
-case'menuftoko':
-conn.sendMessage(from, help(f, pushname, time), text, {quoted: ftoko})
-break
-
 case'bugloc':
-conn.sendMessage(from, help(f, pushname, time), text, {quoted: floc2})
+if (!mek.key.fromMe) return reply('Only Owner')
+conn.sendMessage(from, 'aowokaow', text, {quoted: floc2})
 break
 
 case 'japanesemenu':
@@ -458,7 +451,7 @@ break
 case 'runtime':
 runtime = process.uptime()
 teks = `${kyun(runtime)}`
-conn.sendMessage(from, `[RUNTIME BOTZ]\n\n${teks}`, text, {quoted: fvn})
+conn.sendMessage(from, `[RUNTIME BOTZ]\n\n${teks}`, text, {quoted: ftoko})
 break
 
     case 'jadibot':
@@ -762,7 +755,7 @@ if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 buff = await client.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-conn.sendMessage(_.jid, buff, image, {caption: `[ Ini Broadcast ]\n\n${body.slice(4)}`})
+conn.sendMessage(_.jid, buff, image, {quoted:ftoko, caption: `[ Ini Broadcast ]\n\n${body.slice(4)}`})
 }
 reply('Suksess broadcast')
 } else {
@@ -893,9 +886,7 @@ ${x} Runtime :
 ${hampep}
 ${x} Private chat : ${privat.length}
 ${x} Group chat : ${groups.length}
-${x} Phone : OPPO CPH1715
-${x} OS : Android 6.0
-${x} Cpu : Mediatek`
+`
 imgreply(anu)
 break
 
