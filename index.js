@@ -429,16 +429,15 @@ break
 case'command':
 kentol = process.uptime()
 kentodd = `${kyun(kentol)}`
-pitur = await conn.getProfilePicture(sender)
-pitar = await getBuffer(pitur)
+pitur = await conn.getProfilePicture(conn.user.jid)
 await reply('Silahkan ditunggu..')
-conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftoko, thumbnail: pitar, jpegThumbnail: pitar, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
+conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftoko, thumbnail: pitur, jpegThumbnail: pitur, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
     externalAdReply: {
                     title: `Time : ${time}`,
                     body: `Hello ${pushname}👋\nRuntime : ${kentodd}`,
                     mediaType: 2,
                     mediaUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ',
-                    thumbnailUrl: pitar
+                    thumbnailUrl: pitur
                 }}})
 break
 
