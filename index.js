@@ -56,6 +56,8 @@ selfnya = true
 multi = true
 nopref = false
 prefa = 'z'
+autongetik = false
+autovn = false
 
 //************************************************************\\  
 // STICKER CMD!
@@ -121,6 +123,14 @@ const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.
         prefix = ''
         } else {
         prefix = prefa
+}}
+
+//BUATAN GUE. JANGAN EDIT NTR EMROR NANGES
+        if (autovn){
+        conn.updatePresence(from, Presence.recording)
+        } else {
+        if (autongetik){
+        conn.updatePresence(from, Presence.composing)
 }}
 body  = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : (type == 'stickerMessage') && (getCmd(mek.message[type].fileSha256.toString('base64')) !== null && getCmd(mek.message[type].fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message[type].fileSha256.toString('base64')) : ""
 budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
@@ -419,14 +429,16 @@ break
 case'command':
 kentol = process.uptime()
 kentodd = `${kyun(kentol)}`
+pitur = await conn.getProfilePicture(sender)
+pitar = await getBuffer(pitur)
 await reply('Silahkan ditunggu..')
-conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftoko, thumbnail: fakeimg, jpegThumbnail: fakeimg, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
+conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftoko, thumbnail: pitar, jpegThumbnail: pitar, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
     externalAdReply: {
                     title: `Time : ${time}`,
                     body: `Hello ${pushname}👋\nRuntime : ${kentodd}`,
                     mediaType: 2,
                     mediaUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ',
-                    thumbnailUrl: 'https://telegra.ph/file/3cb0ee81e6d6fa9b3a2ab.png'
+                    thumbnailUrl: pitar
                 }}})
 break
 
