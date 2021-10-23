@@ -50,7 +50,8 @@ const { fakeimg, f,fake,x, xteamApi } = setting
 //DATABASE
 _scommand = JSON.parse(fs.readFileSync("./database/scommand.json"));
  const antivo = JSON.parse(fs.readFileSync("./database/antiviewonce.json"));
-const welkom = JSON.parse(fs.readFileSync('./database/welkom.json')
+
+const welkom = JSON.parse(fs.readFileSync('./database/welkom.json'));
 //************************************************************\\ 
 //FUNCTION!
 selfnya = true
