@@ -50,6 +50,7 @@ const { fakeimg, f,fake,x, xteamApi } = setting
 //DATABASE
 _scommand = JSON.parse(fs.readFileSync("./database/scommand.json"));
  const antivo = JSON.parse(fs.readFileSync("./database/antiviewonce.json"));
+const welkom = JSON.parse(fs.readFileSync('./database/welkom.json')
 //************************************************************\\ 
 //FUNCTION!
 selfnya = true
@@ -161,6 +162,8 @@ const conts = mek.key.fromMe ? conn.user.jid : conn.contacts[sender] || { notify
 const pushname = mek.key.fromMe ? conn.user.name : conts.notify || conts.vname || conts.name || '-'
 
 const isAntiviewonce = isGroup ? antivo.includes(from) : false;
+
+const isWelkom = isGroup ? welkom.includes(from) : false;
 
 colors = ['red', 'white', 'black', 'blue', 'yellow', 'green']
 const isMedia = (type === 'imageMessage' || type === 'videoMessage')
@@ -563,6 +566,23 @@ conn.groupAdd(from, [args[1] + '@s.whatsapp.net'])
 } else {
 reply()}
 break
+
+case 'welcome':
+if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply('「PENGGUNAAN」\nzwelcome 1 = untuk menyalakan\nzwelcome 0 = untuk matikan')
+if (args[0] === 1) {
+if (isWelkom) return reply('UDH NYALA OMM')
+welkom.push(from)
+fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
+reply('_Fungsi welcome diaktifkan di grup ini_')
+} else if (args[0] === 0) {
+welkom.splice(from)
+fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
+reply('Fungsi welcome dinonaktifkan di grup ini')
+} else {
+reply('「PENGGUNAAN」\nzwelcome 1 = untuk menyalakan\nzwelcome 0 = untuk matikan')
+}
+break		
 
 case 'cecan': 
 dyy = ['cewe hijab','cewe','cewe cantik','cecan','gadis']
