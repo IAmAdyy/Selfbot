@@ -15,6 +15,9 @@ const help = (f, pushname, time, kentodd, sender) => {
 🔖 _Number : wa.me/${sender.split('@s.whatsapp.net')[0]}_
 🔖 _Time : ${time}_
 
+🌹 _NEW UPDATE!!!_
+🔖 _Welcome With Button_ | _zwelcome_
+
 🌹 _Info_
 ${f}sc_
 ${f}owner_
@@ -62,6 +65,7 @@ ${f}take [author|packname]_
 ${f}virtex [virus]_
 ${f}setnama [name]_
 ${f}sherelock [text|text]_
+${f}welcome [1/0]_
 
 🌹 _Video/Vn_
 ${f}tomp4 [reply sticker]_
