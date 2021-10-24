@@ -501,6 +501,12 @@ case 'tes':
 conn.sendMessage(from, `${x}Okeh nyala`, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "",body:"Created using JavaScript. Lol",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
 break
 
+case 'sendpesan':
+case 'reply':
+adiyy = args.join(' ')
+reply(adiyy)
+break
+
 case 'group': case 'grup':
 if (!isGroup) return reply(mess.OnlyGrup)
 if (!isBotGroupAdmins) return reply(mess.BotAdmin)
@@ -576,7 +582,8 @@ if (isWelkom) return reply('UDH NYALA OMM')
 welkom.push(from)
 fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
 reply('_Fungsi welcome diaktifkan di grup ini_')
-} else if (args[0] === 0) {
+} else { 
+if (args[0] === 0) {
 welkom.splice(from)
 fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
 reply('Fungsi welcome dinonaktifkan di grup ini')
