@@ -1,22 +1,17 @@
 const help = (f, pushname, time, kentodd, sender) => {
-	return `_Hello *${pushname}* 👋_
-
+	return `
 🌹 _Info Bot_
 🔖 _Script : https://github.com/IAmAdyy/Selfbot_
-🔖 _Bot Name : AdyyBot_
 🔖 _Prefix : Multi Prefix_
 🔖 _Runtime : ${kentodd}_
 🔖 _Language : JavaScript_
 🔖 _Framework : NodeJS_
-🔖 _simple.js Enabled : false_
 
-🌹 _Other Information_
+🌹 _Info User_
 🔖 _Username : ${pushname}_
 🔖 _Number : wa.me/${sender.split('@s.whatsapp.net')[0]}_
-🔖 _Time : ${time}_
 
-🌹 _NEW UPDATE!!!_
-🔖 _Welcome With Button_ | _zwelcome_
+🔖 _Time : ${time}_
 
 🌹 _Info_
 ${f}sc_
@@ -37,18 +32,25 @@ ${f}stopjadibot_
 ${f}byebot_
 ${f}listjadibot_
 
-🌹 _Owner Bot_
+🌹 _Baileys_
+${f}isbaileys_
+${f}q [reply]_
+
+🌹 _Virus & Bug (beta)_
+${f}virtex
+
+🌹 _Execution_
 🔖 _> [eval]_
 🔖 _=> [eval async]_
 🔖 _$ [code]_
 ${f}term [code]_
+
+🌹 _Owner Bot_
 ${f}upswteks [teks]_
 ${f}upswvideo [send video]_
 ${f}upswimage [send image]_
 ${f}mode [button]_
 ${f}setprefix [buttton]_
-${f}SETPREFIX2_
-${f}bugloc_
 ${f}antiviewonce [button]_
 ${f}setfakeimg [reply]_
 ${f}setthumb [reply]_
@@ -56,13 +58,10 @@ ${f}bc [teks]_
 ${f}setimagereply_
 ${f}clearall [all chat]_
 ${f}setpp [reply picture]_
-${f}setpp2full [error]_
 ${f}leave [group]_
-${f}q [reply]_
 ${f}get [link]_
 ${f}sider [reply]_
 ${f}take [author|packname]_
-${f}virtex [virus]_
 ${f}setnama [name]_
 ${f}sherelock [text|text]_
 ${f}welcome [1/0]_
@@ -130,14 +129,7 @@ ${f}pakgirl_
 ${f}sange_
 ${f}nolep_
 ${f}jahat_
-${f}baik_
-
-🌹 _Next UPDATE!!!!_
-_Button Menu_
-_Simple Menu_
-
-_FITURNYA DIKIT AJA. JANGAN BULLY SAIA_
-`
+${f}baik_`
 }
 
 exports.help = help
