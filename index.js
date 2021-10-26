@@ -390,6 +390,17 @@ reply(e)
 //TAMPILAN LOG!
 if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+
+//SETTING STATUS
+let settingstatus = 0;
+    if (new Date() * 1 - settingstatus > 1000) {
+      let _uptime = process.uptime() * 1000;
+      let uptime = kyun(_uptime);
+
+await conn.setStatus(`ADII-USERBOT | Mode : ${selfnya ? 'SELF-MODE' : 'PUBLIC-MODE'} | Aktif Selama ${uptime}`).catch((_) => _);
+      settingstatus = new Date() * 1;
+    }
+
 if (!mek.key.fromMe && selfnya === true ) return
 //************************[COMMADO]************************\\
 switch(command || commando) {
@@ -403,15 +414,16 @@ runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
 sendButMessage(
 from,
-`🌹 _Simple menu_
+`🌹 _${conn.user.name}_
 
 🔖 _Name : ${pushname}_
 🔖 _Runtime : ${bjirnya}_
 🔖 _Time : ${time}_
 🔖 _Prefix : ${prefix}_
+🔖 _API : @adiwajshing/baileys_
 `,
-`_Jika button timdak muncul_
-_silahkan kemtik .command_`,
+`_Jika button tidak muncul_
+_silahkan ketik .command_`,
  [
  {
 buttonId: `command`,
@@ -423,7 +435,7 @@ type: 1,
 {
 buttonId: `sc`,
 buttonText: {
-displayText: `🌹 SCRIPT BOTZ`,
+displayText: `🔖 SCRIPT BOTZ`,
 },
 type: 1,
 },
@@ -434,8 +446,7 @@ case'command':
 kentol = process.uptime()
 kentodd = `${kyun(kentol)}`
 pitur = await conn.getProfilePicture(conn.user.jid)
-await reply('Silahkan ditunggu..')
-conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftoko, thumbnail: pitur, jpegThumbnail: pitur, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
+conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted: ftroli, thumbnail: pitur, jpegThumbnail: pitur, contextInfo : { forwardingScore: 520, isForwarded: true, mentionedJid: sender,
     externalAdReply: {
                     title: `Time : ${time}`,
                     body: `Hello ${pushname}👋\nRuntime : ${kentodd}`,
@@ -445,9 +456,11 @@ conn.sendMessage(from, help(f, pushname, time, kentodd, sender), text, { quoted:
                 }}})
 break
 
-case'bugloc':
-if (!mek.key.fromMe) return reply('Only Owner')
-conn.sendMessage(from, 'aowokaow', text, {quoted: floc2})
+case 'isbaileys': 
+case 'bail': 
+case 'baileys':
+if (!mek.key.fromMe) return
+reply(`${mek.quoted.isBaileys}`)
 break
 
 case 'japanesemenu':
@@ -1005,6 +1018,10 @@ conn.sendMessage(from, buff, audio, { duration: 999999999, ptt: true, quoted: me
 fs.unlinkSync(rano)
 })
 })
+break
+
+case 'wame'
+reply(`wa.me/${sender.split('@s.whatsapp.net')[0]}`)
 break
 
 case 'setpp':
