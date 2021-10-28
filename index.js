@@ -3,6 +3,7 @@ WAConnection: _WAConnection, MessageType, Presence, MessageOptions, Mimetype, WA
 } = require("@adiwajshing/baileys")
 const simple = require('./lib/simple.js')
 const hx = require('hxz-api')
+const adii = require('adii-api')
 const translate = require("@vitalets/google-translate-api");
 const qrcode = require("qrcode-terminal")
 const moment = require("moment-timezone")
