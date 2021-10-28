@@ -1,7 +1,7 @@
 {
-  "name": "SZ-SELF",
+  "name": "Selfbot",
   "version": "0.0.1",
-  "description": "SZBase",
+  "description": "Base",
   "main": "run.js",
   "directories": {
     "lib": "lib"
@@ -9,6 +9,7 @@
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
     "@vitalets/google-translate-api": "^7.0.0",
+    "adii-api": "git+https://github.com/IAmAdyy/Adii-Api",
     "async": "^2.4.1",
     "awesome-phonenumber": "^2.57.0",
     "axios": "^0.21.1",
