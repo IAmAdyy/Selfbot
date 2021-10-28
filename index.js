@@ -556,6 +556,7 @@ type: 1,
 break;
 
 case 'kick':
+case 'ulti':
 if (!isGroup) return reply(mess.OnlyGrup);
 if (!isBotGroupAdmins) return imgreply(mess.BotAdmin)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.GropAdmin);
@@ -585,25 +586,7 @@ conn.groupAdd(from, [args[1] + '@s.whatsapp.net'])
 .catch((err) => reply(jsonformat(err)))
 } else {
 reply()}
-break
-
-case 'welcome':
-if (!isGroup) return reply(mess.only.group)
-if (args.length < 1) return reply('「PENGGUNAAN」\nzwelcome 1 = untuk menyalakan\nzwelcome 0 = untuk matikan')
-if (args[0] === 1) {
-if (isWelkom) return reply('UDH NYALA OMM')
-welkom.push(from)
-fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
-reply('_Fungsi welcome diaktifkan di grup ini_')
-} else { 
-if (args[0] === 0) {
-welkom.splice(from)
-fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
-reply('Fungsi welcome dinonaktifkan di grup ini')
-} else {
-reply('「PENGGUNAAN」\nzwelcome 1 = untuk menyalakan\nzwelcome 0 = untuk matikan')
-}
-break		
+break	
 
 case 'cecan': 
 dyy = ['cewe hijab','cewe','cewe cantik','cecan','gadis']
@@ -726,7 +709,7 @@ text: value,
 contextInfo: { mentionedJid: mem },
 quoted: mek
 }
-conn.sendMessage(from, optionshidetagg, text, {quoted: fonce})
+conn.sendMessage(from, optionshidetagg, text, {quoted: ftoko})
 break
            
 case 'setprefix2':
