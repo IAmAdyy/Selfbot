@@ -511,7 +511,7 @@ sendKontak(from, '60199782326', 'Ini Gue', 'Wkwk')
 break
 
 case 'tes':
-conn.sendMessage(from, `${x}Okeh nyala`, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "",body:"Created using JavaScript. Lol",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
+conn.sendMessage(from, `Okeh nyala`, text, {quoted:ftoko, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "",body:"Created using JavaScript. Lol",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
 break
 
 case 'sendpesan':
@@ -1003,7 +1003,7 @@ fs.unlinkSync(rano)
 })
 break
 
-case 'wame'
+case 'wame':
 reply(`wa.me/${sender.split('@s.whatsapp.net')[0]}`)
 break
 
