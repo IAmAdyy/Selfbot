@@ -215,7 +215,7 @@ const isUrl = (url) => {
         return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
 }
 const reply = (teks) => {
-        conn.sendMessage(from, teks, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "Adii Bot [SELF]",body:`TIME : ${time}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:"https://wa.me/60199782326"}}})
+        conn.sendMessage(from, teks, text, {quoted:mek, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply:{title: "",body:`Hello ${pushname}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/thumb.jpeg'),sourceUrl:""}}})
 }
 const sendMess = (hehe, teks) => {
         conn.sendMessage(hehe, teks, text, {quoted:ftoko})
@@ -415,13 +415,12 @@ runzz = process.uptime()
 bjirnya = `${kyun(runzz)}`
 sendButMessage(
 from,
-`🌹 _${conn.user.name}_
+`Hello ${pushname}
 
-🔖 _Name : ${pushname}_
 🔖 _Runtime : ${bjirnya}_
 🔖 _Time : ${time}_
 🔖 _Prefix : ${prefix}_
-🔖 _API : @adiwajshing/baileys_
+🔖 _Lib : @adiwajshing/baileys_
 `,
 `_Jika button tidak muncul_
 _silahkan ketik .command_`,
@@ -508,7 +507,7 @@ break
     break
 
 case 'owner': case 'creator':
-sendKontak(from, '60199782326', 'Ini Gue', 'Wkwk')
+sendKontak(from, '60199782326', `Creator ${conn.user.name}`, 'Wkwk')
 break
 
 case 'tes':
