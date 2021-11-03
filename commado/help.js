@@ -1,51 +1,38 @@
-const help = (f, pushname, time, kentodd, sender) => {
+const help = (f, pushname, time, kentodd, sender, prefix) => {
 	return `
-🌹 _Info Bot_
-🔖 _Script : https://github.com/IAmAdyy/Selfbot_
-🔖 _Prefix : Multi Prefix_
-🔖 _Runtime : ${kentodd}_
-🔖 _Language : JavaScript_
-🔖 _Framework : NodeJS_
+_こんにちは ${pushname} 👋_
 
-🌹 _Info User_
-🔖 _Username : ${pushname}_
-🔖 _Number : wa.me/${sender.split('@s.whatsapp.net')[0]}_
+「SELFBOT WEA」
+_JAM : ${time}_
+_Script : https://github.com/IAmAdyy/selfbot_
+_Prefix : Multi Prefix_
+_Runtime : ${kentodd}
 
-🔖 _Time : ${time}_
-
-🌹 _Info_
+[INGFO]
 ${f}sc_
 ${f}owner_
 ${f}ping_
 ${f}status_
 ${f}runtime_
-${f}tes_
 
-🌹 _Other Menu_
-${f}japanesemenu_
-${f}russianmenu_
-
-🌹 _Multi Session_
+[MULTI SESSION]
 ${f}jadibot_
 ${f}scan_
 ${f}stopjadibot_
 ${f}byebot_
 ${f}listjadibot_
 
-🌹 _Baileys_
+[BAILEYS]
 ${f}isbaileys_
 ${f}q [reply]_
 
-🌹 _Virus & Bug (beta)_
-${f}virtex
-
-🌹 _Execution_
-🔖 _> [eval]_
-🔖 _=> [eval async]_
-🔖 _$ [code]_
+[EXECUTION]
+_> [eval]_
+_=> [eval async]_
+_$ [code]_
 ${f}term [code]_
 
-🌹 _Owner Bot_
+[OWNER]
 ${f}upswteks [teks]_
 ${f}upswvideo [send video]_
 ${f}upswimage [send image]_
@@ -66,23 +53,23 @@ ${f}setnama [name]_
 ${f}sherelock [text|text]_
 ${f}welcome [1/0]_
 
-🌹 _Video/Vn_
+[VIDEO DAN VIEN]
 ${f}tomp4 [reply sticker]_
 ${f}detikvideo [sec]_
 ${f}detikvn [sec]_
 ${f}tts [lang] [text]_
 
-🌹 _Anime_
+[ANIME]
 ${f}waifu_
 ${f}loli_
 ${f}husbu_
 
-🌹 _Pictures_
+[PICTURE]
 ${f}cogan_
 ${f}cecan_
 ${f}darkjokes_
 
-🌹 _Group_
+[GROUP]
 ${f}kick [reply]_
 ${f}add [reply]_
 ${f}group [button]_
@@ -92,17 +79,17 @@ ${f}hidetag [teks]_
 ${f}rulesgroup [desc gc]_
 ${f}getpic [@tag]_
 
-🌹 _Other_
+[YNTKTS]
 ${f}inspect [link grup]_
 ${f}readmore [text|text]_
 ${f}linkwa [query]_
 ${f}translate [lang] [text]_
 
-🌹 _Sticker_
+[STICKER]
 ${f}sticker [image]_
 ${f}toimg [sticker]_
 
-🌹 _Downloader_
+[DOWNLOADER]
 ${f}play [query]_
 ${f}video [query]_
 ${f}pinterest [query]_
@@ -110,12 +97,12 @@ ${f}playstore [query]_
 ${f}igstory [username]_
 ${f}lirik [query]_
 
-🌹 _Sticker Command_
+[SCOMMAND]
 ${f}addcmd_
 ${f}delcmd_
 ${f}listcmd_
 
-🌹 _Fun_
+[FUN]
 ${f}jadian_
 ${f}ganteng_
 ${f}beban_
