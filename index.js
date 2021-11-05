@@ -325,6 +325,7 @@ key:{ fromMe: false, participant:'0@s.whatsapp.net',
 "midQualityFileSha256": "gUeM8GWF23VMvVy8gvF7vzVsWiDnK2GVI1zO3mpLF9s=",
 "viewOnce": true
 }}}
+
 const imgreply = (teks) => {
 conn.sendMessage(from, teks, text, {quoted:freply})}
 
