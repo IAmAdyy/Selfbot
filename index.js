@@ -1420,7 +1420,7 @@ break
 case 'mode':
 sendButMessage(
 from,
-`STATUS MODE BOT`,
+`STATUS MODE BOOT`,
 `Silahkan pilih salah satu`,
  [
  {
