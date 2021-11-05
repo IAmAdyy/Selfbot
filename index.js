@@ -438,7 +438,6 @@ case 'menu':
 case 'help':
 const buttonwws = [
   {buttonId: `command`, buttonText: {displayText: `Commands`}, type: 1}
-  {buttonId: `sc`, buttonText: {displayText: `Sc gw`}, type: 1}
 ]
     const buttonMessagwwe = {
     	"locationMessage": {
